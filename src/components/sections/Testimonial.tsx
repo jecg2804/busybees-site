@@ -1,6 +1,7 @@
 import { getLocale } from 'next-intl/server';
 import { createClient } from '@/lib/supabase/server';
 import { t } from '@/lib/utils/format';
+import { FadeInUp } from '@/components/motion/FadeInUp';
 import type { Testimonial as TestimonialType, Locale } from '@/lib/types/database';
 
 export default async function Testimonial() {
@@ -21,20 +22,22 @@ export default async function Testimonial() {
 
   return (
     <section className="bg-warm">
-      <div className="max-w-[700px] mx-auto px-6 py-16 md:py-20">
-        <blockquote className="border-l-[3px] border-honey pl-6 md:pl-8">
-          <p className="text-[19px] md:text-[20px] italic text-text leading-[1.7]">
-            &ldquo;{t(testimonial, 'quote', locale)}&rdquo;
-          </p>
-          <footer className="mt-5">
-            <span className="font-medium text-dark">
-              {testimonial.author_name}
-            </span>
-            <span className="block text-sm text-text-faint mt-0.5">
-              {t(testimonial, 'author_role', locale)}
-            </span>
-          </footer>
-        </blockquote>
+      <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+        <FadeInUp>
+          <blockquote className="border-l-[3px] border-honey pl-6 md:pl-8">
+            <p className="text-[19px] md:text-[20px] italic font-display text-text leading-[1.7]">
+              &ldquo;{t(testimonial, 'quote', locale)}&rdquo;
+            </p>
+            <footer className="mt-5">
+              <span className="font-medium text-dark">
+                {testimonial.author_name}
+              </span>
+              <span className="block text-sm text-text-faint mt-0.5">
+                {t(testimonial, 'author_role', locale)}
+              </span>
+            </footer>
+          </blockquote>
+        </FadeInUp>
       </div>
     </section>
   );

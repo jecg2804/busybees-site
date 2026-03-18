@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import LangToggle from './LangToggle';
 import MobileNav from './MobileNav';
@@ -35,14 +36,22 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 h-16 flex items-center transition-all duration-200 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-sm border-b border-line shadow-sm'
+            ? 'bg-warm/95 backdrop-blur-sm border-b border-line shadow-[var(--shadow-warm)]'
             : 'bg-transparent'
         }`}
       >
-        <div className="w-full max-w-[1100px] mx-auto px-6 flex items-center justify-between">
+        <div className="w-full max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <span className="font-display text-xl font-semibold text-dark tracking-tight">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Busy Bees Learning Center"
+              width={44}
+              height={44}
+              className="h-9 w-auto md:h-11 rounded-lg"
+              priority
+            />
+            <span className="font-display text-lg font-semibold text-dark tracking-tight hidden sm:inline">
               Busy Bees
             </span>
           </Link>
@@ -66,6 +75,7 @@ export default function Header() {
 
             {/* Mobile hamburger */}
             <button
+              type="button"
               onClick={() => setMobileOpen(true)}
               className="lg:hidden flex flex-col gap-[5px] p-2 cursor-pointer"
               aria-label="Open menu"
@@ -78,7 +88,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Spacer para contenido debajo del header fijo */}
+      {/* Spacer */}
       <div className="h-16" />
 
       <MobileNav

@@ -11,7 +11,9 @@
   --color-cream: #FDF6EA;
   --color-warm: #FFFBF4;
   --color-blue: #2E86DE;
+  --color-blue-light: #EBF5FF;
   --color-pink: #F2A0B7;
+  --color-pink-light: #FDF0F4;
   --color-lavender: #D4B8E8;
   --color-green: #6BBF7B;
   --color-dark: #222018;
@@ -27,6 +29,18 @@
   --color-little-bees: #F5A623;
   --color-busy-bees: #2E86DE;
   --color-queen-bees: #9B59B6;
+
+  /* Warm shadows */
+  --shadow-warm: 0 4px 20px rgba(34, 32, 24, 0.08);
+  --shadow-warm-lg: 0 8px 30px rgba(34, 32, 24, 0.1);
+
+  /* Blob animation */
+  --animate-blob: blob 8s ease-in-out infinite;
+
+  @keyframes blob {
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  }
 }
 
 body {

@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Fredoka, DM_Sans } from "next/font/google";
 import { routing } from "@/i18n/routing";
+import { SmoothScrollProvider } from "@/components/motion/SmoothScroll";
 import "../globals.css";
 
 const fredoka = Fredoka({
@@ -49,7 +50,9 @@ export default async function LocaleLayout({
         className={`${fredoka.variable} ${dmSans.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <SmoothScrollProvider>
+            {children}
+          </SmoothScrollProvider>
         </NextIntlClientProvider>
       </body>
     </html>
