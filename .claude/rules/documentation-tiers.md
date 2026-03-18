@@ -1,23 +1,27 @@
-# Tiers de documentación
+---
+paths: Docs/**
+---
+# Documentation Tiers
 
-## Tier 1 — Solo Chat modifica:
+## Tier 1 — Only Chat modifies:
 - Docs/FEATURE_SPEC.md
 - Docs/BUILD_PLAN.md
 - Docs/SCHEMA.md
+- CLAUDE.md
+- .claude/rules/*
 
-Si encuentras una discrepancia, NO corrijas estos archivos.
+Do NOT edit these. If you find a discrepancy, write it in SYNC_LOG.
 
-## Tier 2 — Claude Code puede actualizar:
-- Docs/PROGRESS.md (marcar pasos, agregar bugs)
-- Docs/SYNC_LOG.md (agregar notas de implementación)
+## Tier 2 — Claude Code updates:
+- Docs/PROGRESS.md (mark steps done, add bugs)
+- Docs/SYNC_LOG.md (add implementation notes)
 
-## Tier 3 — Claude Code puede sugerir:
-Si descubres algo que no cuadra con el spec, escribe en SYNC_LOG.md:
+## Tier 3 — Claude Code suggests:
+When something doesn't match the spec, add to SYNC_LOG.md:
 ```
-## YYYY-MM-DD — Code: [descripción]
-- Discrepancia: FEATURE_SPEC dice X pero implementé Y porque Z
-- Sugerencia: [cambio propuesto]
+## YYYY-MM-DD — Code: [topic]
+- Discrepancy: FEATURE_SPEC says X but I found Y
+- What I did: [action taken]
+- Suggestion: [proposed change to spec]
 - Awaiting Chat decision.
 ```
-
-James revisará con Chat y actualizará Tier 1 si es necesario.

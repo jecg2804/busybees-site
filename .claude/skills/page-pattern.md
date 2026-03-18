@@ -1,6 +1,6 @@
-# Skill: Crear página pública
+# Skill: Public Page Pattern
 
-## Patrón de Server Component con datos de Supabase
+## Server Component with Supabase data
 
 ```typescript
 // app/[locale]/(public)/programas/page.tsx
@@ -9,13 +9,22 @@ import { getTranslations } from 'next-intl/server'
 import { t } from '@/lib/utils/i18n-content'
 
 interface Props {
-  params: Promise<{ locale: string }>
+  params: Promise<{ locale: string }>  // Next.js 15: params is a Promise
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params
+  const tr = await getTranslations({ locale, namespace: 'programs' })
+  return {
+    title: tr('meta_title'),
+    description: tr('meta_description'),
+  }
 }
 
 export default async function ProgramasPage({ params }: Props) {
-  const { locale } = await params
+  const { locale } = await params  // MUST await
   const supabase = await createClient()
-  const tr = await getTranslations('programs') // UI strings from messages/
+  const tr = await getTranslations('programs')
 
   const { data: programs } = await supabase
     .from('programs')
@@ -25,35 +34,35 @@ export default async function ProgramasPage({ params }: Props) {
 
   return (
     <main>
-      {/* Header */}
+      {/* Header — cream bg, centered text */}
       <section className="bg-cream px-8 py-20">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-semibold text-text-faint tracking-widest uppercase mb-4">
+        <div className="mx-auto max-w-[700px]">
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.5px] text-text-faint">
             {tr('label')}
           </p>
-          <h1 className="font-display text-4xl font-semibold text-dark leading-tight">
+          <h1 className="font-display text-[42px] font-semibold leading-[1.15] tracking-[-0.5px] text-dark">
             {tr('title')}
           </h1>
         </div>
       </section>
 
-      {/* Content from Supabase */}
+      {/* Alternating sections — see design-system.md */}
       {programs?.map((program, i) => (
-        <section key={program.id} className={i % 2 === 0 ? 'bg-white' : 'bg-warm'}>
-          <div className="max-w-5xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <section key={program.id} className={i % 2 === 0 ? 'bg-white' : 'bg-cream'}>
+          <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 px-8 py-16 md:grid-cols-2">
             {/* Photo placeholder */}
-            <div className="bg-sand rounded-md h-72 flex items-center justify-center">
-              <span className="text-4xl">{program.emoji}</span>
+            <div className={`flex min-h-[300px] items-center justify-center rounded-2xl border border-dashed border-sand bg-cream ${i % 2 !== 0 ? 'md:order-2' : ''}`}>
+              <span className="text-sm text-text-faint">📷 {t(program, 'name', locale)}</span>
             </div>
             {/* Text */}
-            <div>
-              <p className="text-sm font-medium text-honey mb-2">
+            <div className={i % 2 !== 0 ? 'md:order-1' : ''}>
+              <p className="mb-2 text-sm font-medium text-honey">
                 {t(program, 'age_range', locale)}
               </p>
-              <h2 className="font-display text-3xl font-semibold text-dark mb-4">
+              <h2 className="mb-4 font-display text-[28px] font-semibold leading-[1.2] tracking-[-0.5px] text-dark">
                 {t(program, 'name', locale)}
               </h2>
-              <p className="text-base text-text-soft leading-relaxed">
+              <p className="text-[16px] leading-[1.7] text-text-soft">
                 {t(program, 'description', locale)}
               </p>
             </div>
@@ -65,24 +74,9 @@ export default async function ProgramasPage({ params }: Props) {
 }
 ```
 
-## Convenciones de layout
-
-- **Header sections:** bg-cream, max-w-3xl centered, uppercase label + h1
-- **Content sections:** alternar bg-white y bg-warm
-- **Grid:** max-w-5xl, grid 1col mobile → 2col desktop
-- **Photo placeholders:** bg-sand rounded-md con emoji centered
-- **Spacing:** py-16 entre secciones, gap-12 en grids
-- **Typography:** font-display para headings, font-body implícito para texto
-
-## SEO metadata
-
-```typescript
-export async function generateMetadata({ params }: Props) {
-  const { locale } = await params
-  const tr = await getTranslations('programs')
-  return {
-    title: tr('meta_title'),
-    description: tr('meta_description'),
-  }
-}
-```
+## Layout patterns
+- **Header:** bg-cream, max-w-[700px] centered, uppercase label + h1
+- **Content:** alternate bg-white and bg-cream
+- **Grids:** max-w-[1100px], 1col mobile → 2col desktop, alternating photo/text sides
+- **Spacing:** py-16 sections, gap-12 grids
+- **Photo placeholders:** cream bg, dashed border, rounded-2xl

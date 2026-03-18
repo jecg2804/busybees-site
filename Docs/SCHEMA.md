@@ -176,7 +176,7 @@ Submissions del formulario de contacto y tour requests.
 
 ---
 
-## Storage Buckets (manual setup)
+## Storage Buckets
 
 | Bucket | Propósito | Public |
 |--------|-----------|--------|

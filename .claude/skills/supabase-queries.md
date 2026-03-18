@@ -1,41 +1,33 @@
-# Skill: Queries de Supabase
+# Skill: Supabase Queries
 
-## Cliente correcto
+## Correct client imports
 - **Server Components:** `import { createClient } from '@/lib/supabase/server'`
 - **Client Components:** `import { createClient } from '@/lib/supabase/client'`
+- Server client is async: `const supabase = await createClient()`
+- Client client is sync: `const supabase = createClient()`
 
-## Fetch content bilingüe
+## Bilingual content helper
 ```typescript
-// En Server Component
-const supabase = await createClient()
-const locale = 'es' // from params
+// lib/utils/i18n-content.ts
+export function t<T extends Record<string, unknown>>(
+  item: T, field: string, locale: string
+): string {
+  return (item[`${field}_${locale}`] as string) || (item[`${field}_es`] as string) || ''
+}
+```
 
+## Common queries
+
+### Programs (active, sorted)
+```typescript
 const { data: programs } = await supabase
   .from('programs')
   .select('*')
   .eq('is_active', true)
   .order('sort_order')
-
-// Usar en template:
-// program[`name_${locale}`] → "Baby Bees"
-// program[`description_${locale}`] → texto en idioma correcto
 ```
 
-## Helper para seleccionar idioma
-```typescript
-// lib/utils/i18n-content.ts
-export function t<T extends Record<string, unknown>>(
-  item: T,
-  field: string,
-  locale: string
-): string {
-  return (item[`${field}_${locale}`] as string) || (item[`${field}_es`] as string) || ''
-}
-
-// Uso: t(program, 'name', locale) → "Baby Bees"
-```
-
-## Fetch site settings
+### Site settings (by key)
 ```typescript
 const { data } = await supabase
   .from('site_settings')
@@ -45,35 +37,43 @@ const { data } = await supabase
 const settings = Object.fromEntries(
   (data ?? []).map(row => [row.key, row.value])
 )
-// settings.general.phone → "+507 6727-6989"
 ```
 
-## Insert inquiry (contact form)
+### Featured testimonial
 ```typescript
-// Client component — form submission
-const { error } = await supabase
-  .from('inquiries')
-  .insert({
-    type: 'contact',
-    parent_name: formData.name,
-    email: formData.email,
-    phone: formData.phone,
-    child_age: formData.childAge,
-    message: formData.message,
-    source: 'website',
-  })
+const { data: testimonial } = await supabase
+  .from('testimonials')
+  .select('*')
+  .eq('is_featured', true)
+  .eq('is_active', true)
+  .order('sort_order')
+  .limit(1)
+  .maybeSingle()  // returns null if none found, not an error
 ```
 
-## Blog posts (public — only published)
+### Blog posts (public — RLS filters unpublished for anon)
 ```typescript
-// RLS already filters is_published = true for anon users
 const { data: posts } = await supabase
   .from('blog_posts')
   .select('slug, title_es, title_en, excerpt_es, excerpt_en, category, published_at, cover_image_url')
   .order('published_at', { ascending: false })
 ```
 
-## NUNCA:
-- No hardcodear content que viene de Supabase
-- No usar `.single()` sin manejar null
-- No olvidar `.eq('is_active', true)` en tablas con ese campo
+### Insert inquiry (client component form)
+```typescript
+const { error } = await supabase.from('inquiries').insert({
+  type: 'contact',
+  parent_name: formData.name,
+  email: formData.email,
+  phone: formData.phone,
+  child_age: formData.childAge,
+  message: formData.message,
+  source: 'website',
+})
+```
+
+## NEVER
+- Never hardcode content that comes from Supabase
+- Never use `.single()` without handling null — use `.maybeSingle()`
+- Never forget `.eq('is_active', true)` on tables with that column
+- Never use `*` select in production queries with many columns — select what you need

@@ -1,16 +1,19 @@
-# No modificar base de datos
+---
+paths: src/lib/supabase/** src/lib/types/**
+---
+# No Database Modifications
 
-Claude Code tiene acceso READ-ONLY a Supabase via MCP.
+Claude Code has READ-ONLY Supabase access via MCP.
 
-## NUNCA:
-- Crear, modificar, o eliminar tablas
-- Ejecutar migrations
-- Modificar RLS policies
-- Crear usuarios en Supabase Auth
-- Crear buckets en Storage
+## NEVER:
+- Create, alter, or drop tables
+- Run migrations
+- Modify RLS policies
+- Create auth users
+- Create storage buckets
 
-## Si necesitas un cambio de BD:
-1. Escribe la necesidad en Docs/SYNC_LOG.md
-2. Dile a James: "Necesito un cambio de BD, consulta con Chat"
-3. Espera a que Chat haga el cambio y actualice SCHEMA.md
-4. Solo entonces implementa el código que usa la nueva estructura
+## If you need a schema change:
+1. Write the need in Docs/SYNC_LOG.md
+2. Tell James: "Necesito un cambio de BD, consulta con Chat"
+3. Wait for Chat to update SCHEMA.md
+4. Then implement code using the new structure
