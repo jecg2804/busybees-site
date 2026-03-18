@@ -35,8 +35,22 @@
 - [x] 0.8 i18n/ — routing.ts + navigation.ts + request.ts (next-intl v4)
 - [x] 0.9 .env.example — template con vars de Supabase
 
-### Fase 1: Layout + Home — ⏳ No iniciada
-- [ ] 1.1–1.16 Layout shell + UI + Home sections
+### Fase 1: Layout + Home — ✅ Completada (2026-03-17)
+- [x] 1.1–1.3 globals.css con design tokens, root layout, locale layout (Fredoka + DM Sans)
+- [x] 1.4 Header.tsx — sticky 64px, logo, nav center, lang toggle, hamburger mobile
+- [x] 1.5 Footer.tsx — 3 columnas: brand, links, contacto
+- [x] 1.6 MobileNav.tsx — slide-in from right con overlay
+- [x] 1.7 LangToggle.tsx — ES/EN switch button
+- [x] 1.8 Button.tsx — primary/secondary/ghost, soporta href (link) o button
+- [x] 1.9 WhatsAppFAB.tsx — fixed bottom-right, 52px rounded-square, #25D366
+- [x] PhotoPlaceholder.tsx — cream bg, dashed border, camera icon
+- [x] 1.10 Hero.tsx — two-column, headline + CTAs + photo placeholder
+- [x] 1.11 Values.tsx — centered text + honey divider
+- [x] 1.12 Features.tsx — 3 alternating photo-text sections
+- [x] 1.13 ProgramsPreview.tsx — 4 programs from Supabase con color border-top
+- [x] 1.14 Testimonial.tsx — featured quote from Supabase, honey left border
+- [x] 1.15 CTASection.tsx — WhatsApp CTA
+- [x] 1.16 Home page composing all sections + (public) layout wrapper
 
 ### Fase 2: Content Pages + Blog — ⏳ No iniciada
 - [ ] 2.1–2.12 All public pages (about, programs, team, gallery, admissions, contact, blog, events, calendar)
