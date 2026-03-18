@@ -31,6 +31,14 @@
     "ctaText": "Reach out on WhatsApp and we'll answer all your questions.",
     "ctaButton": "Message us on WhatsApp"
   },
+  "features": {
+    "playTitle": "Play-based learning",
+    "playDesc": "Our curriculum transforms every moment into a discovery opportunity. Children learn math by counting seeds, science by observing insects in the garden, and language by narrating their own adventures.",
+    "bilingualTitle": "Natural bilingual immersion",
+    "bilingualDesc": "English isn't taught as a subject — it's lived. Our bilingual teachers naturally alternate between Spanish and English, creating an environment where both languages flow organically.",
+    "smallGroupsTitle": "Small groups, real attention",
+    "smallGroupsDesc": "With a maximum of 10–12 children per classroom and two dedicated teachers, every child receives the individualized attention they need to flourish at their own pace."
+  },
   "about": {
     "title": "Two teachers with a dream.",
     "missionTitle": "Our Mission",

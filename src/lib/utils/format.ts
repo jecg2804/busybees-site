@@ -44,13 +44,9 @@ export function formatPhoneNumber(phone: string): string {
  * Selecciona el campo bilingüe correcto según locale.
  * Uso: t(program, 'name', locale) → program.name_es o program.name_en
  */
-export function t<T extends Record<string, unknown>>(
-  item: T,
-  field: string,
-  locale: Locale
-): string {
-  const key = `${field}_${locale}` as keyof T;
-  return (item[key] as string) ?? '';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function t(item: any, field: string, locale: Locale): string {
+  return (item[`${field}_${locale}`] as string) ?? '';
 }
 
 /**

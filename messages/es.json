@@ -31,6 +31,14 @@
     "ctaText": "Escríbenos por WhatsApp y resolvemos todas tus dudas.",
     "ctaButton": "Escríbenos por WhatsApp"
   },
+  "features": {
+    "playTitle": "Aprendizaje basado en el juego",
+    "playDesc": "Nuestro currículo transforma cada momento en una oportunidad de descubrimiento. Los niños aprenden matemáticas contando semillas, ciencia observando insectos en el jardín, y lenguaje narrando sus propias aventuras.",
+    "bilingualTitle": "Inmersión bilingüe natural",
+    "bilingualDesc": "El inglés no se enseña como materia — se vive. Nuestras maestras bilingües alternan naturalmente entre español e inglés, creando un ambiente donde ambos idiomas fluyen orgánicamente.",
+    "smallGroupsTitle": "Grupos pequeños, atención real",
+    "smallGroupsDesc": "Con máximo 10–12 niños por salón y dos maestras dedicadas, cada niño recibe la atención individualizada que necesita para florecer a su propio ritmo."
+  },
   "about": {
     "title": "Dos maestras con un sueño.",
     "missionTitle": "Nuestra Misión",
