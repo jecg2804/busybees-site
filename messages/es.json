@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "programs": "Programas",
+    "team": "Equipo",
+    "gallery": "Galería",
+    "admissions": "Admisiones",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "login": "Ingresar"
+  },
+  "footer": {
+    "tagline": "Shaping hearts, minds, and confidence from the start.",
+    "contact": "Contacto",
+    "links": "Enlaces",
+    "programs": "Programas",
+    "copyright": "© {year} Busy Bees Learning Center. Todos los derechos reservados."
+  },
+  "home": {
+    "heroHeadline": "Donde el juego es el camino.",
+    "heroSubtitle": "Preescolar bilingüe basado en el juego en Ciudad de Panamá. Abrimos en 2026.",
+    "heroCta": "Agenda un Tour",
+    "heroCtaSecondary": "Conócenos",
+    "heroTags": "Basado en el juego · Bilingüe · Grupos de 10–12",
+    "valuesTitle": "Conectamos. Creamos. Crecemos. Jugamos.",
+    "valuesText": "Creemos que los niños aprenden mejor cuando se sienten seguros, curiosos y libres de explorar. Nuestro enfoque combina juego estructurado con descubrimiento natural.",
+    "programsTitle": "Nuestros Programas",
+    "programsLink": "Ver todos los programas",
+    "ctaTitle": "¿Preguntas?",
+    "ctaText": "Escríbenos por WhatsApp y resolvemos todas tus dudas.",
+    "ctaButton": "Escríbenos por WhatsApp"
+  },
+  "about": {
+    "title": "Dos maestras con un sueño.",
+    "missionTitle": "Nuestra Misión",
+    "visionTitle": "Nuestra Visión",
+    "valuesTitle": "The Busy Bees Way"
+  },
+  "programs": {
+    "title": "Diseñados para cada etapa.",
+    "subtitle": "Cada programa respeta el ritmo natural de desarrollo de tu hijo.",
+    "extrasTitle": "Extracurriculares"
+  },
+  "team": {
+    "title": "Conoce a las Queen Bees.",
+    "foundersTitle": "Fundadoras",
+    "teachersTitle": "Nuestro Equipo",
+    "teachersIntro": "Cada maestra en BusyBees es seleccionada no solo por su formación, sino por su calidez y pasión por la educación temprana.",
+    "careersTitle": "¿Quieres ser parte de nuestra colmena?",
+    "careersText": "Envíanos tu CV a"
+  },
+  "gallery": {
+    "title": "Momentos en nuestra colmena.",
+    "all": "Todo",
+    "classrooms": "Salones",
+    "activities": "Actividades",
+    "events": "Eventos",
+    "instagramCta": "Más fotos en"
+  },
+  "admissions": {
+    "title": "Únete a nuestra colmena.",
+    "step1": "Contáctanos",
+    "step1Desc": "Escríbenos por WhatsApp o llena nuestro formulario.",
+    "step2": "Agenda un Tour",
+    "step2Desc": "Conoce nuestras instalaciones y equipo.",
+    "step3": "Solicitud + Documentos",
+    "step3Desc": "Completa el formulario de solicitud y envía los documentos requeridos.",
+    "step4": "¡Bienvenido!",
+    "step4Desc": "Tu hijo es parte de la colmena.",
+    "docsTitle": "Documentos Requeridos",
+    "paymentTitle": "Métodos de Pago",
+    "paymentMethods": "Yappy · Nequi · ACH · Tarjeta · Efectivo",
+    "ctaTitle": "¿Lista para dar el primer paso?",
+    "ctaButton": "Escríbenos por WhatsApp"
+  },
+  "blog": {
+    "title": "Blog",
+    "backToList": "Volver al blog",
+    "readMore": "Leer más",
+    "noPostsYet": "Próximamente publicaremos artículos sobre educación temprana y crianza."
+  },
+  "contact": {
+    "title": "Hablemos.",
+    "nameLabel": "Nombre completo",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@email.com",
+    "phonePlaceholder": "+507 6000-0000",
+    "phoneLabel": "Teléfono / WhatsApp",
+    "childAgeLabel": "Edad del niño",
+    "childAgePlaceholder": "Ej: 2 años",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿En qué podemos ayudarte?",
+    "submitButton": "Enviar mensaje",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Te contactaremos pronto. También puedes escribirnos por WhatsApp.",
+    "errorText": "Hubo un error al enviar. Intenta de nuevo o escríbenos por WhatsApp."
+  },
+  "common": {
+    "learnMore": "Conoce más",
+    "viewAll": "Ver todo",
+    "loading": "Cargando...",
+    "error": "Algo salió mal.",
+    "whatsapp": "WhatsApp",
+    "age": "Edad",
+    "backToHome": "Volver al inicio"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "programs": "Programas",
+    "team": "Equipo",
+    "testimonials": "Testimonios",
+    "blog": "Blog",
+    "gallery": "Galería",
+    "inquiries": "Consultas",
+    "faq": "FAQ",
+    "settings": "Ajustes",
+    "logout": "Cerrar sesión",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear nuevo",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar este elemento?"
+  },
+  "metadata": {
+    "homeTitle": "Busy Bees Learning Center — Preescolar Bilingüe en Panamá",
+    "homeDescription": "Preescolar bilingüe basado en el juego en Ciudad de Panamá. Grupos pequeños, maestras dedicadas, inmersión en inglés natural. Abrimos en 2026.",
+    "aboutTitle": "Nosotros — Busy Bees Learning Center",
+    "aboutDescription": "Conoce la historia detrás de BusyBees, dos maestras con un sueño de crear el mejor preescolar en Panamá.",
+    "programsTitle": "Programas — Busy Bees Learning Center",
+    "programsDescription": "Cuatro programas diseñados por edad: Baby Bees, Little Bees, Busy Bees y Queen Bees. Cada uno respeta el ritmo natural de tu hijo.",
+    "teamTitle": "Equipo — Busy Bees Learning Center",
+    "teamDescription": "Conoce a las fundadoras y maestras de BusyBees Learning Center.",
+    "galleryTitle": "Galería — Busy Bees Learning Center",
+    "galleryDescription": "Momentos del día a día en BusyBees Learning Center.",
+    "admissionsTitle": "Admisiones — Busy Bees Learning Center",
+    "admissionsDescription": "Proceso de admisión, documentos requeridos y métodos de pago para BusyBees Learning Center.",
+    "blogTitle": "Blog — Busy Bees Learning Center",
+    "blogDescription": "Artículos sobre educación temprana, crianza y vida en BusyBees.",
+    "contactTitle": "Contacto — Busy Bees Learning Center",
+    "contactDescription": "Contáctanos por WhatsApp, email o llena nuestro formulario. Estamos aquí para resolver tus dudas."
+  }
+}

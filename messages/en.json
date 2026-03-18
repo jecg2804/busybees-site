@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "programs": "Programs",
+    "team": "Team",
+    "gallery": "Gallery",
+    "admissions": "Admissions",
+    "blog": "Blog",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "footer": {
+    "tagline": "Shaping hearts, minds, and confidence from the start.",
+    "contact": "Contact",
+    "links": "Links",
+    "programs": "Programs",
+    "copyright": "© {year} Busy Bees Learning Center. All rights reserved."
+  },
+  "home": {
+    "heroHeadline": "Where play is the way.",
+    "heroSubtitle": "Play-based bilingual preschool in Panama City. Opening 2026.",
+    "heroCta": "Book a Tour",
+    "heroCtaSecondary": "Learn More",
+    "heroTags": "Play-based · Bilingual · Groups of 10–12",
+    "valuesTitle": "We Connect. We Create. We Grow. We Play.",
+    "valuesText": "We believe children learn best when they feel safe, curious, and free to explore. Our approach combines structured play with natural discovery.",
+    "programsTitle": "Our Programs",
+    "programsLink": "View all programs",
+    "ctaTitle": "Questions?",
+    "ctaText": "Reach out on WhatsApp and we'll answer all your questions.",
+    "ctaButton": "Message us on WhatsApp"
+  },
+  "about": {
+    "title": "Two teachers with a dream.",
+    "missionTitle": "Our Mission",
+    "visionTitle": "Our Vision",
+    "valuesTitle": "The Busy Bees Way"
+  },
+  "programs": {
+    "title": "Designed for every stage.",
+    "subtitle": "Each program respects your child's natural pace of development.",
+    "extrasTitle": "Extracurriculars"
+  },
+  "team": {
+    "title": "Meet the Queen Bees.",
+    "foundersTitle": "Founders",
+    "teachersTitle": "Our Team",
+    "teachersIntro": "Every teacher at BusyBees is chosen not just for their training, but for their warmth and passion for early education.",
+    "careersTitle": "Want to join our hive?",
+    "careersText": "Send us your CV at"
+  },
+  "gallery": {
+    "title": "Moments in our hive.",
+    "all": "All",
+    "classrooms": "Classrooms",
+    "activities": "Activities",
+    "events": "Events",
+    "instagramCta": "More photos on"
+  },
+  "admissions": {
+    "title": "Join our hive.",
+    "step1": "Contact Us",
+    "step1Desc": "Reach out via WhatsApp or fill out our form.",
+    "step2": "Book a Tour",
+    "step2Desc": "Visit our facilities and meet the team.",
+    "step3": "Application + Documents",
+    "step3Desc": "Complete the application form and submit the required documents.",
+    "step4": "Welcome!",
+    "step4Desc": "Your child is part of the hive.",
+    "docsTitle": "Required Documents",
+    "paymentTitle": "Payment Methods",
+    "paymentMethods": "Yappy · Nequi · ACH · Credit Card · Cash",
+    "ctaTitle": "Ready to take the first step?",
+    "ctaButton": "Message us on WhatsApp"
+  },
+  "blog": {
+    "title": "Blog",
+    "backToList": "Back to blog",
+    "readMore": "Read more",
+    "noPostsYet": "We'll be publishing articles about early education and parenting soon."
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@email.com",
+    "phoneLabel": "Phone / WhatsApp",
+    "phonePlaceholder": "+507 6000-0000",
+    "childAgeLabel": "Child's age",
+    "childAgePlaceholder": "E.g. 2 years old",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submitButton": "Send message",
+    "successTitle": "Message sent!",
+    "successText": "We'll get back to you soon. You can also reach us on WhatsApp.",
+    "errorText": "Something went wrong. Please try again or reach us on WhatsApp."
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "loading": "Loading...",
+    "error": "Something went wrong.",
+    "whatsapp": "WhatsApp",
+    "age": "Age",
+    "backToHome": "Back to home"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "programs": "Programs",
+    "team": "Team",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "gallery": "Gallery",
+    "inquiries": "Inquiries",
+    "faq": "FAQ",
+    "settings": "Settings",
+    "logout": "Log out",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create new",
+    "confirmDelete": "Are you sure you want to delete this item?"
+  },
+  "metadata": {
+    "homeTitle": "Busy Bees Learning Center — Bilingual Preschool in Panama",
+    "homeDescription": "Play-based bilingual preschool in Panama City. Small groups, dedicated teachers, natural English immersion. Opening 2026.",
+    "aboutTitle": "About — Busy Bees Learning Center",
+    "aboutDescription": "Learn the story behind BusyBees, two teachers with a dream of creating the best preschool in Panama.",
+    "programsTitle": "Programs — Busy Bees Learning Center",
+    "programsDescription": "Four age-based programs: Baby Bees, Little Bees, Busy Bees, and Queen Bees. Each respects your child's natural pace.",
+    "teamTitle": "Team — Busy Bees Learning Center",
+    "teamDescription": "Meet the founders and teachers of BusyBees Learning Center.",
+    "galleryTitle": "Gallery — Busy Bees Learning Center",
+    "galleryDescription": "Daily life moments at BusyBees Learning Center.",
+    "admissionsTitle": "Admissions — Busy Bees Learning Center",
+    "admissionsDescription": "Admissions process, required documents, and payment methods for BusyBees Learning Center.",
+    "blogTitle": "Blog — Busy Bees Learning Center",
+    "blogDescription": "Articles about early education, parenting, and life at BusyBees.",
+    "contactTitle": "Contact — Busy Bees Learning Center",
+    "contactDescription": "Contact us via WhatsApp, email, or fill out our form. We're here to help."
+  }
+}
