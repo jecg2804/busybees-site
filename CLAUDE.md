@@ -44,9 +44,9 @@ If it's implementation based on what's documented → **DO IT**.
 
 ## Supabase
 - Project: `lnvykzlqojnbvrxdjvhn` (us-east-1)
-- 9 tables. See SCHEMA.md for details.
+- 31 tables across 9 domains. See SCHEMA.md for details.
 - Storage: `images` bucket (public) for photos.
-- Auth: email/password for admin only (no public registration).
+- Auth: email/password for admin AND parents (dual auth system).
 
 ## Conventions
 - Server Components by default. `'use client'` only with interactivity.
