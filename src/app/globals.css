@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Fonts */
+  --font-display: var(--font-fredoka);
+  --font-body: var(--font-dm-sans);
+
+  /* Brand colors */
+  --color-honey: #F5A623;
+  --color-honey-dark: #D4901E;
+  --color-cream: #FDF6EA;
+  --color-warm-white: #FFFBF4;
+  --color-blue: #2E86DE;
+  --color-pink: #F2A0B7;
+  --color-lavender: #D4B8E8;
+  --color-green: #6BBF7B;
+  --color-dark: #222018;
+  --color-body: #3D3A33;
+  --color-body-soft: #6E6960;
+  --color-sand: #F0E9DC;
+
+  /* Program colors */
+  --color-baby-bees: #F2A0B7;
+  --color-little-bees: #F5A623;
+  --color-busy-bees: #2E86DE;
+  --color-queen-bees: #9B59B6;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
