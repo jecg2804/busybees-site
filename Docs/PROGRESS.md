@@ -18,14 +18,22 @@
 | .env.local | ✅ Creado | Supabase URL + anon key |
 | Vercel | ⏳ Pendiente | Conectar después de Fase 0 |
 | Dominio | ⏳ Pendiente | busybees.com.pa o similar |
-| Next.js Scaffold | ⏳ Pendiente | Fase 0 |
+| Next.js Scaffold | ✅ Completo | Next.js 15 + TS + Tailwind v4 + @supabase/ssr + next-intl |
 
 ---
 
 ## Progreso por Fase
 
-### Fase 0: Fundación — ⏳ No iniciada
-- [ ] 0.1–0.14 Foundation (types, supabase clients, i18n, middleware, globals)
+### Fase 0: Fundación — ✅ Completada (2026-03-17)
+- [x] 0.1 database.ts — tipos TS para 9 tablas
+- [x] 0.2 supabase/client.ts — createBrowserClient
+- [x] 0.3 supabase/server.ts + middleware.ts — createServerClient + session refresh
+- [x] 0.4 constants.ts — design tokens, site config, colores por programa
+- [x] 0.5 format.ts — formatDate, formatCurrency, formatPhoneNumber, t()
+- [x] 0.6 messages/es.json + en.json — UI strings completas
+- [x] 0.7 middleware.ts — next-intl routing + Supabase session + admin auth guard
+- [x] 0.8 i18n/ — routing.ts + navigation.ts + request.ts (next-intl v4)
+- [x] 0.9 .env.example — template con vars de Supabase
 
 ### Fase 1: Layout + Home — ⏳ No iniciada
 - [ ] 1.1–1.16 Layout shell + UI + Home sections
