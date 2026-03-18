@@ -46,7 +46,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${fredoka.variable} ${dmSans.variable} font-body antialiased bg-warm-white text-body`}
+        className={`${fredoka.variable} ${dmSans.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
